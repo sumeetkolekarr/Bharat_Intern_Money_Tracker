@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="/add" method="post">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bdcontain">
+    <div class="container">
+      <form action="/add" method="post">
         <h1>Money Tracker App</h1>
-        <div class="input-section">
-            <label for="category_select">Category: </label>
-            <select id="category_select" name="category_id">
-                <option value="Expense">Expense</option>
-                <option value="Income">Income</option>
-            </select>
-            <label for="amount_input">Amount: </label>
-            <input type="number" id="amount_input" name="amount_input">
-            <label for="info">Info: </label>
-            <input type="text" id="info" name="info">
-            <label for="date_input">Amount: </label>
-            <input type="date" id="date_input" name="date_input">
-            <button type="submit" id="add_btn">Add</button>
+        <div class="input-group">
+          <label for="category_select">Category:</label>
+          <select id="category_select" name="category_id">
+            <option value="Expense">Expense</option>
+            <option value="Income">Income</option>
+          </select>
         </div>
-    </form>
-
-    <div class="expenses-list">
+        <div class="input-group">
+          <label for="amount_input">Amount:</label>
+          <input
+            type="number"
+            id="amount_input"
+            name="amount_input"
+            placeholder="Enter amount"
+          />
+        </div>
+        <div class="input-group">
+          <label for="info">Info:</label>
+          <input type="text" id="info" name="info" placeholder="Enter info" />
+        </div>
+        <div class="input-group">
+          <label for="date_input">Date:</label>
+          <input type="date" id="date_input" name="date_input" />
+        </div>
+        <button type="submit" id="add_btn">Add</button>
+      </form>
+      <div class="expenses-list">
         <h2>Expenses and Incomes List</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Amount</th>
-                    <th>Info</th>
-                    <th>Date</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody id="expense-table-body">
-
-            </tbody>
-            <tfoot>
-                <td>Total:</td>
-                <td id="total-amount"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tfoot>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Info</th>
+              <th>Date</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="expense-table-body"></tbody>
+          <tfoot>
+            <tr>
+              <td>Total:</td>
+              <td id="total-amount"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
         </table>
+      </div>
     </div>
+</div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

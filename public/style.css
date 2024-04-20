@@ -1,69 +1,103 @@
-body{
-    background-color: rgb(172, 211, 246);
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-}
-
-h1,h2{
+    padding: 0;
+  }
+  
+  h1, h2 {
     text-align: center;
-}
-
-.input-section{
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
     align-items: center;
-    padding: 10px;
-}
-
-.input-section label{
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    width: 120px;
     font-weight: bold;
     margin-right: 10px;
-}
-
-.input-section input{
-    padding: 5px;
-    margin-right: 10px;
-}
-
-.input-section button{
-    padding: 5px 10px;
-    background-color: rgb(208, 73, 129);
-    color: white;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+  }
+  
+  #add_btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.expenses-list{
-    margin: 20px;
-}
-
-table{
+    align-self: flex-end;
+  }
+  
+  #add_btn:hover {
+    background-color: #45a049;
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
-}
-
-th,td{
-    border: 1px solid #ddd;
+  }
+  
+  th, td {
     padding: 8px;
     text-align: left;
-}
-
-th{
-    background-color: rgb(246, 75, 28);
-    color: white;
-}
-
-tfoot td{
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tfoot td {
     font-weight: bold;
-}
-
-.delete-btn{
+  }
+  
+  .delete-btn {
     padding: 5px 10px;
-    background-color: rgb(198, 69, 69);
-    color: white;
+    background-color: #f44336;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+
+  .bdcontain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
+
+.container{
+    border-radius: 10px;
+  }
